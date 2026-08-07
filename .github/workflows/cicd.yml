@@ -3,23 +3,23 @@ name: CICD
 on:
   workflow_dispatch:
 jobs:
-   code:
+  code:
      runs-on: ubuntu-latest
      steps:
        - name: checkout code
          run: echo "Code clone from Github"
-   build:
+  build:
       runs-on: ubuntu-latest
       steps:
        - name: Build Docker Container
          run: echo "Docker Container Build"
-   test:
+  test:
       runs-on: ubuntu-latest
       steps:
        - name: test the container
          run: echo "Testing the container"
     
-    deploy:
+  deploy:
        runs-on: ubuntu-latest
        steps:
         - name: Deployment
